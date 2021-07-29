@@ -1,0 +1,36 @@
+---
+title: "TableByProvince"
+author: "IGM"
+date: "2/12/2021"
+output: 
+  pdf_document: 
+    latex_engine: lualatex
+    keep_tex: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+| Province                  | Bottom 1% | Bottom 10% | Top 1% | Top 10% |
+|---------------------------|-----------|------------|--------|---------|
+| Newfoundland and Labrador | 6560      | 730        | 70     | 730     |
+| Nova Scotia               | 22400     | 1570       | 100    | 850     |
+| New Brunswick             | 14560     | 1220       | 20     | 800     |
+| Quebec                    | 130270    | 16650      | 1340   | 12120   |
+| Ontario                   | 265480    | 40000      | 4130   | 35050   |
+| Manitoba                  | 59510     | 3920       | 290    | 3020    |
+| Saskatchewan              | 10780     | 1560       | 290    | 2980    |
+| Alberta                   | 31680     | 5370       | 1750   | 13100   |
+| British Columbia          | 147750    | 9570       | 830    | 7190    |
+
+: Number of Women in X% of income distribution by Province
+
+```{r echo =FALSE, warning=FALSE,message=FALSE}
+install.packages("tidyverse",repos = "http://cran.us.r-project.org")
+library(tidyverse)
+```
+
+```{r echo =FALSE, warning=FALSE,message=FALSE}
+source("TableforProvinces.R")
+```
